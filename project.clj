@@ -1,4 +1,4 @@
-(defproject ertu/nrebl.middleware "0.1.0"
+(defproject ertu/nrebl.middleware "0.1.1"
   :description "An nREPL and cider middleware for capturing and
   browsing data in REBL."
   :url "https://github.com/Swirrl/matcha"

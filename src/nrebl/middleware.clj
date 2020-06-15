@@ -9,8 +9,9 @@
 
 
 (defn send-to-rebl! [{:keys [code] :as req} {:keys [value] :as resp}]
-  (println "Response: " resp)
-  (when (and code (contains? resp :value))
+  (when (and code
+             (contains? resp :value)
+             (-> value symbol namespace (not= "cursive.repl.runtime")))
         (rebl/submit (read-string code) value))
   resp)
 
